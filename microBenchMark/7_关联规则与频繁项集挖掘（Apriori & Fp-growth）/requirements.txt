@@ -1,0 +1,3 @@
+efficient_apriori==2.0.1
+pandas==1.1.5
+pyfpgrowth==1.0

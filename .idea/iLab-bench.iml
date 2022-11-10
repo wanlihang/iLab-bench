@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/4_LinearRegression算法/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/1_WordCount词频统计/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/2_PageRank网页排序/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/3_MapReduce的索引倒排/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/5_K-Means聚类算法/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/6_SVM支持向量机/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/13_AutoEncoder时序数据异常检测/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/14_LeNet图像分类/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/15_简单卷积神经网络图像分割/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/16_UNet卷积神经网络图像分割/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/17_PaddleOcr验证码识别/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/18_SubPixel图像超分辨率/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/19_Resnet18人脸关键点检测/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/20_NGram训练wordEmbedding/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/21_Bow网络文本分类/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/22_预训练的GloVeEmbedding词向量文本分类/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/23_融合注意力机制的LSTM机器翻译/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/24_使用序列到序列模型完成数字加法/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/25_使用协同过滤实现电影推荐/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/26_强化学习ActorCriticMethod/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/7_关联规则与频繁项集挖掘（Apriori &amp; Fp-growth）/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/9_航班准点情况数据分析/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/10_股票市场数据分析/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/11_亚洲人口数据分析/app/data" />
+      <excludeFolder url="file://$MODULE_DIR$/microBenchMark/12_销售量数据分析/app/data" />
+    </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (paddle)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

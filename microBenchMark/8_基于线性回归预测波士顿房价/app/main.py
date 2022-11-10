@@ -1,11 +1,12 @@
-import paddle
-import numpy as np
-import os
+import warnings
+
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+import paddle
+import paddle.nn.functional as F
 import pandas as pd
 import seaborn as sns
-import warnings
 
 warnings.filterwarnings("ignore")
 
@@ -27,17 +28,16 @@ labels_np = np.array([x[-1] for x in housing_data], np.float32)
 df = pd.DataFrame(housing_data, columns=feature_names)
 matplotlib.use('TkAgg')
 sns.pairplot(df.dropna(), y_vars=feature_names[-1], x_vars=feature_names[::-1], diag_kind='kde')
-plt.show()
+plt.show(block=True)
 
 # 相关性分析
 fig, ax = plt.subplots(figsize=(15, 1))
 corr_data = df.corr().iloc[-1]
 corr_data = np.asarray(corr_data).reshape(1, 14)
 ax = sns.heatmap(corr_data, cbar=True, annot=True)
-plt.show()
+plt.show(block=True)
 
 sns.boxplot(data=df.iloc[:, 0:13])
-
 
 features_max = housing_data.max(axis=0)
 features_min = housing_data.min(axis=0)
@@ -52,7 +52,7 @@ def feature_norm(input):
     for batch_id in range(f_size[0]):
         for index in range(13):
             output_features[batch_id][index] = (input[batch_id][index] - features_avg[index]) / (
-                        features_max[index] - features_min[index])
+                    features_max[index] - features_min[index])
     return output_features
 
 
@@ -95,10 +95,8 @@ def draw_train_process(iters, train_costs):
     plt.xlabel("iter", fontsize=14)
     plt.ylabel("cost", fontsize=14)
     plt.plot(iters, train_costs, color='red', label='training cost')
-    plt.show()
+    plt.show(block=True)
 
-
-import paddle.nn.functional as F
 
 y_preds = []
 labels_list = []
@@ -175,7 +173,7 @@ def plot_pred_ground(pred, ground):
     plt.ylabel("predict price", fontsize=14)
     plt.scatter(ground, pred, alpha=0.5)  # scatter:散点图,alpha:"透明度"
     plt.plot(ground, ground, c='red')
-    plt.show()
+    plt.show(block=True)
 
 
 plot_pred_ground(fetch_list, infer_labels_np)
