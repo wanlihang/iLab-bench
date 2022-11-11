@@ -1,2 +1,5 @@
 *.whl
 /*/*/app/data/
+.idea\
+target\
+META-INF\
