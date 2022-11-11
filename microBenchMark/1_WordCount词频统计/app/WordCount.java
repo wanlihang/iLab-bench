@@ -9,7 +9,6 @@ import org.apache.spark.api.java.function.VoidFunction;
 import scala.Tuple2;
 
 import java.util.Arrays;
-import java.util.Iterator;
 
 public class WordCount {
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class WordCount {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         // 读取文件
-        JavaRDD<String> lines = sc.textFile("./data/t8.shakespeare.txt");
+        JavaRDD<String> lines = sc.textFile("microBenchMark/1_WordCount词频统计/app/data/t8.shakespeare.txt");
 
         // 截取单词
         JavaRDD<String> words = lines.flatMap((FlatMapFunction<String, String>) s -> Arrays.asList(s.split("\\s+")).iterator());

@@ -1,7 +1,5 @@
 /app/paddlepaddle-2.3.2-cp38-cp38-linux_x86_64.whl
 matplotlib==3.4.1
 numpy==1.20.2
-paddle==1.0.2
-paddlepaddle==2.3.2
 pandas==1.1.5
 seaborn==0.12.1
