@@ -8,12 +8,13 @@ import paddle.nn.functional as F
 import paddle.optimizer as optim
 from paddle.distribution import Categorical
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 201
 
 device = paddle.get_device()
 
 # 或者 env = gym.make("CartPole-v0").unwrapped 开启无锁定环境训练
-env = gym.make("CartPole-v0")
+env = gym.make("CartPole-v1")
 
 state_size = env.observation_space.shape[0]
 action_size = env.action_space.n
@@ -136,4 +137,4 @@ if __name__ == '__main__':
         print('Critic Model loaded')
     else:
         critic = Critic(state_size, action_size)
-    trainIters(actor, critic, n_iters=201)
+    trainIters(actor, critic, n_iters=EPOCH)

@@ -1,7 +1,8 @@
 import paddle
 import numpy as np
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 2
 
 print('loading dataset...')
 train_dataset = paddle.text.datasets.Imdb(mode='train')
@@ -27,7 +28,6 @@ vocab_size = len(word_dict) + 1
 emb_size = 256
 seq_len = 200
 batch_size = 32
-epochs = 2
 pad_id = word_dict['<pad>']
 
 classes = ['negative', 'positive']
@@ -40,16 +40,6 @@ def ids_to_str(ids):
         w = list(word_dict)[k]
         words.append(w if isinstance(w, str) else w.decode('ASCII'))
     return " ".join(words)
-
-
-vocab_size = len(word_dict) + 1
-emb_size = 256
-seq_len = 200
-batch_size = 32
-epochs = 2
-pad_id = word_dict['<pad>']
-
-classes = ['negative', 'positive']
 
 
 def ids_to_str(ids):
@@ -143,52 +133,6 @@ model.prepare(optimizer=paddle.optimizer.Adam(learning_rate=0.001, parameters=mo
 # 模型训练
 model.fit(train_loader,
           test_loader,
-          epochs=epochs,
+          epochs=EPOCH,
           batch_size=batch_size,
           verbose=1)
-
-# # 方式2：用底层API训练与验证 ##
-# def train(model):
-#     model.train()
-#     opt = paddle.optimizer.Adam(learning_rate=0.001, parameters=model.parameters())
-#
-#     for epoch in range(epochs):
-#         for batch_id, data in enumerate(train_loader):
-#
-#             sent = data[0]
-#             label = data[1]
-#
-#             logits = model(sent)
-#             loss = paddle.nn.functional.cross_entropy(logits, label)
-#
-#             if batch_id % 500 == 0:
-#                 print("epoch: {}, batch_id: {}, loss is: {}".format(epoch, batch_id, loss.numpy()))
-#
-#             loss.backward()
-#             opt.step()
-#             opt.clear_grad()
-#
-#         # evaluate model after one epoch
-#         model.eval()
-#         accuracies = []
-#         losses = []
-#
-#         for batch_id, data in enumerate(test_loader):
-#             sent = data[0]
-#             label = data[1]
-#
-#             logits = model(sent)
-#             loss = paddle.nn.functional.cross_entropy(logits, label)
-#             acc = paddle.metric.accuracy(logits, label)
-#
-#             accuracies.append(acc.numpy())
-#             losses.append(loss.numpy())
-#
-#         avg_acc, avg_loss = np.mean(accuracies), np.mean(losses)
-#         print("[validation] accuracy/loss: {}/{}".format(avg_acc, avg_loss))
-#
-#         model.train()
-#
-#
-# model = MyNet()
-# train(model)

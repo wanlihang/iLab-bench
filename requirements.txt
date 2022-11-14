@@ -1,0 +1,16 @@
+efficient_apriori==2.0.1
+gym==0.26.2
+imageio==2.19.3
+ipython==8.6.0
+matplotlib==3.5.3
+numpy==1.21.5
+paddlepaddle==2.3.2
+pandas==1.4.4
+pandas_datareader==0.10.0
+Pillow==9.3.0
+pyfpgrowth==1.0
+scikit_learn==1.1.3
+scipy==1.9.3
+seaborn==0.11.2
+tqdm==4.64.1
+visualdl==2.4.1

@@ -3,6 +3,9 @@ import paddle.nn.functional as F
 from paddle.metric import Accuracy
 from paddle.vision.transforms import Compose, Normalize
 
+# 训练轮数
+EPOCH = 2
+
 transform = Compose([Normalize(mean=[127.5],
                                std=[127.5],
                                data_format='CHW')])
@@ -53,7 +56,7 @@ model.prepare(
 
 # 训练模型
 model.fit(train_dataset,
-          epochs=2,
+          epochs=EPOCH,
           batch_size=64,
           verbose=1
           )

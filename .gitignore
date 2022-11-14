@@ -3,3 +3,17 @@
 .idea\
 target\
 META-INF\
+/microBenchMark/17_PaddleOcr验证码识别/app/output/
+/microBenchMark/16_UNet卷积神经网络图像分割/app/predict.txt
+/microBenchMark/16_UNet卷积神经网络图像分割/app/test.txt
+/microBenchMark/16_UNet卷积神经网络图像分割/app/train.txt
+/microBenchMark/13_AutoEncoder时序数据异常检测/app/model
+/microBenchMark/18_SubPixel图像超分辨率/app/checkpoint/
+/microBenchMark/18_SubPixel图像超分辨率/app/out-highres.png
+/microBenchMark/18_SubPixel图像超分辨率/app/out-lowres.png
+/microBenchMark/18_SubPixel图像超分辨率/app/out-prediction.png
+/microBenchMark/24_使用序列到序列模型完成数字加法/app/log/
+/microBenchMark/24_使用序列到序列模型完成数字加法/app/best_model
+/microBenchMark/24_使用序列到序列模型完成数字加法/app/final_model
+/microBenchMark/25_使用协同过滤实现电影推荐/app/checkpoints/
+/microBenchMark/25_使用协同过滤实现电影推荐/app/visualdl/

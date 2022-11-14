@@ -5,7 +5,8 @@ import numpy as np
 import paddle
 import paddle.nn.functional as F
 
-paddle.__version__
+# 训练轮数
+EPOCH = 1
 
 # 文件路径
 path_to_file = './data/t8.shakespeare.txt'
@@ -42,7 +43,6 @@ embedding_dim = 256  # embedding 维度
 batch_size = 256  # batch size 大小
 context_size = 2  # 上下文长度
 vocab_size = len(word_list) + 1  # 词表大小
-epochs = 2  # 迭代轮数
 
 trigram = [[[test_sentence_list[i], test_sentence_list[i + 1]], test_sentence_list[i + 2]]
            for i in range(len(test_sentence_list) - 2)]
@@ -53,7 +53,6 @@ idx_to_word = {word_to_idx[word]: word for word in word_to_idx}
 
 # 看一下数据集
 print(trigram[:3])
-
 
 
 class TrainDataset(paddle.io.Dataset):
@@ -120,7 +119,7 @@ n_gram_model.prepare(optimizer=paddle.optimizer.Adam(learning_rate=0.01,
 
 # 模型训练
 n_gram_model.fit(train_loader,
-                 epochs=epochs,
+                 epochs=EPOCH,
                  batch_size=batch_size,
                  callbacks=[loss_log],
                  verbose=1)
@@ -136,7 +135,7 @@ losses = []
 def train(model):
     model.train()
     optim = paddle.optimizer.Adam(learning_rate=0.01, parameters=model.parameters())
-    for epoch in range(epochs):
+    for epoch in range(EPOCH):
         for batch_id, data in enumerate(train_loader()):
             x_data = data[0]
             y_data = data[1]

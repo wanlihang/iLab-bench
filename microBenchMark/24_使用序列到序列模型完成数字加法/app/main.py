@@ -6,8 +6,8 @@ import paddle
 import paddle.nn as nn
 from visualdl import LogWriter
 
-# 打印Paddle版本
-print('paddle version: %s' % paddle.__version__)
+# 训练轮数
+EPOCH = 2
 
 
 # 编码函数
@@ -282,7 +282,6 @@ hidden_size = 128
 num_layers = 1
 
 # 训练参数设置
-epoch_num = 50
 learning_rate = 0.001
 log_iter = 2000
 eval_iter = 500
@@ -310,7 +309,7 @@ opt = paddle.optimizer.Adam(
 )
 
 # 启动训练，循环epoch_num个轮次
-for epoch in range(epoch_num):
+for epoch in range(EPOCH):
     # 遍历数据集读取数据
     for batch_id, data in enumerate(train_reader()):
         # 读取数据

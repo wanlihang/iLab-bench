@@ -9,7 +9,8 @@ from paddle.io import Dataset
 from paddle.nn import functional as F
 from paddle.vision.transforms import transforms as T
 
-paddle.__version__
+# 训练轮数
+EPOCH = 1
 
 IMAGE_SIZE = (160, 160)
 train_images_path = "./data/images/"
@@ -401,7 +402,7 @@ optim = paddle.optimizer.RMSProp(learning_rate=0.001,
 model.prepare(optim, paddle.nn.CrossEntropyLoss(axis=1))
 model.fit(train_dataset,
           val_dataset,
-          epochs=15,
+          epochs=EPOCH,
           batch_size=32,
           verbose=1)
 

@@ -12,8 +12,8 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
 from paddle.io import Dataset
 
-print(paddle.__version__)
-
+# 训练轮数
+EPOCH = 2
 
 class MyDataset(Dataset):
     def __init__(self):
@@ -184,7 +184,7 @@ model.prepare(paddle.optimizer.Adam(learning_rate=0.001, parameters=model.parame
 
 # 启动模型训练，指定训练数据集，设置训练轮次，设置每次数据集计算的批次大小，设置日志格式
 model.fit(train_dataset,
-          epochs=20,
+          epochs=EPOCH,
           batch_size=16,
           verbose=1)
 

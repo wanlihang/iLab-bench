@@ -4,7 +4,8 @@ import paddle
 import paddle.nn as nn
 from paddle.io import Dataset
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 5
 
 df = pd.read_csv('./data/ml-latest-small/ratings.csv')
 user_ids = df["userId"].unique().tolist()
@@ -132,9 +133,6 @@ class RecommenderNet(nn.Layer):
         return x
 
 
-EMBEDDING_SIZE = 50
-
-
 class RecommenderNet(nn.Layer):
     def __init__(self, num_users, num_movies, embedding_size):
         super(RecommenderNet, self).__init__()
@@ -186,7 +184,7 @@ log_dir = './visualdl'
 callback = paddle.callbacks.VisualDL(log_dir=log_dir)
 
 model.prepare(optimizer, loss, metric)
-model.fit(train_loader, epochs=5, save_dir='./checkpoints', verbose=1, callbacks=callback)
+model.fit(train_loader, epochs=EPOCH, save_dir='./checkpoints', verbose=1, callbacks=callback)
 
 model.evaluate(test_loader, batch_size=64, verbose=1)
 

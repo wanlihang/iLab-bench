@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from paddle.io import Dataset
 
+# 训练轮数
+EPOCH = 2
+
 # 图片信息配置 - 通道数、高度、宽度
 IMAGE_SHAPE_C = 3
 IMAGE_SHAPE_H = 30
@@ -130,8 +133,6 @@ class Net(paddle.nn.Layer):
 
 # 数据集路径设置
 DATA_PATH = "./data/OCR_Dataset"
-# 训练轮数
-EPOCH = 10
 # 每批次数据大小
 BATCH_SIZE = 16
 
@@ -216,7 +217,7 @@ class InferReader(Dataset):
 
 
 # 待预测目录 - 可在测试数据集中挑出\b3张图像放在该目录中进行推理
-INFER_DATA_PATH = "./sample_img"
+INFER_DATA_PATH = "./data/sample_img"
 # 训练后存档点路径 - final 代表最终训练所得模型
 CHECKPOINT_PATH = "./output/final.pdparams"
 # 每批次处理数量

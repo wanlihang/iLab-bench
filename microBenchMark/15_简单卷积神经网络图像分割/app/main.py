@@ -4,7 +4,8 @@ from paddle.vision.transforms import ToTensor
 import numpy as np
 import matplotlib.pyplot as plt
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 2
 
 transform = ToTensor()
 cifar10_train = paddle.vision.datasets.Cifar10(mode='train',
@@ -49,7 +50,6 @@ class MyNet(paddle.nn.Layer):
         return x
 
 
-epoch_num = 10
 batch_size = 32
 learning_rate = 0.001
 
@@ -71,7 +71,7 @@ def train(model):
 
     valid_loader = paddle.io.DataLoader(cifar10_test, batch_size=batch_size)
 
-    for epoch in range(epoch_num):
+    for epoch in range(EPOCH):
         for batch_id, data in enumerate(train_loader()):
             x_data = data[0]
             y_data = paddle.to_tensor(data[1])

@@ -6,7 +6,8 @@ from paddle.io import Dataset
 from paddle.vision.models import resnet18
 from paddle.vision.transforms import transforms
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 2
 
 Train_Dir = './data/facial-keypoints-detection/training/training.csv'
 Test_Dir = './data/facial-keypoints-detection/test/test.csv'
@@ -136,7 +137,7 @@ model = paddle.Model(FaceNet(num_keypoints=15))
 optim = paddle.optimizer.Adam(learning_rate=1e-3,
     parameters=model.parameters())
 model.prepare(optim, paddle.nn.MSELoss())
-model.fit(train_dataset, val_dataset, epochs=60, batch_size=256)
+model.fit(train_dataset, val_dataset, epochs=EPOCH, batch_size=256)
 
 result = model.predict(val_dataset, batch_size=1)
 

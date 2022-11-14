@@ -26,7 +26,7 @@ features_np = np.array([x[:13] for x in housing_data], np.float32)
 labels_np = np.array([x[-1] for x in housing_data], np.float32)
 # data_np = np.c_[features_np, labels_np]
 df = pd.DataFrame(housing_data, columns=feature_names)
-matplotlib.use('TkAgg')
+# matplotlib.use('TkAgg')
 sns.pairplot(df.dropna(), y_vars=feature_names[-1], x_vars=feature_names[::-1], diag_kind='kde')
 plt.show(block=True)
 
@@ -141,7 +141,7 @@ def train(model):
 model = Regressor()
 train(model)
 
-matplotlib.use('TkAgg')
+# matplotlib.use('TkAgg')
 draw_train_process(train_nums, train_costs)
 
 # 获取预测数据

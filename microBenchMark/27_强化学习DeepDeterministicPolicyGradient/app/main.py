@@ -9,6 +9,9 @@ import paddle.nn.functional as F
 from paddle.distribution import Normal
 from visualdl import LogWriter
 
+# 训练轮数
+EPOCH = 250
+
 
 # 定义评论家网络结构
 # DDPG这种方法与Q学习紧密相关，可以看作是连续动作空间的深度Q学习。
@@ -90,7 +93,7 @@ def soft_update(target, source, tau):
     # 定义环境、实例化模型
 
 
-env = gym.make('Pendulum-v0')
+env = gym.make('Pendulum-v1')
 actor = Actor()
 critic = Critic()
 actor_target = Actor()
@@ -111,12 +114,11 @@ begin_train = False
 batch_size = 32
 
 learn_steps = 0
-epochs = 250
 
 writer = LogWriter('logs')
 
 # 训练循环
-for epoch in range(0, epochs):
+for epoch in range(0, EPOCH):
     state = env.reset()
     episode_reward = 0
     for time_step in range(200):

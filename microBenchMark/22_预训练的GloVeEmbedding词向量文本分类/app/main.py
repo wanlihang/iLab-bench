@@ -4,7 +4,8 @@ import numpy as np
 import paddle.text as text
 import random
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 1
 
 print('自然语言相关数据集：', paddle.text.__all__)
 
@@ -126,7 +127,7 @@ model.prepare(optimizer=paddle.optimizer.Adam(learning_rate=0.001, parameters=mo
 eval_length = int(len(train_x) * 1 / 4)
 model.fit(train_data=DataReader(train_x[:-eval_length], train_y[:-eval_length], length),
           eval_data=DataReader(train_x[-eval_length:], train_y[-eval_length:], length),
-          batch_size=32, epochs=10, verbose=1)
+          batch_size=32, epochs=EPOCH, verbose=1)
 
 # 评估
 model.evaluate(eval_data=DataReader(test_x, test_y, length), batch_size=32, verbose=1)

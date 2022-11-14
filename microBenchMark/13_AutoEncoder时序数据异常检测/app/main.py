@@ -9,7 +9,8 @@ import pandas as pd
 import tqdm
 from matplotlib import pyplot as plt
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 20
 
 warnings.filterwarnings("ignore")
 
@@ -112,7 +113,6 @@ class AutoEncoder(paddle.nn.Layer):
 
 
 # 参数设置
-epoch_num = 200
 batch_size = 128
 learning_rate = 0.001
 
@@ -134,7 +134,7 @@ def train():
                                        drop_last=True)
     history_loss = []
     iter_epoch = []
-    for epoch in tqdm.tqdm(range(epoch_num)):
+    for epoch in tqdm.tqdm(range(EPOCH)):
         for batch_id, data in enumerate(data_reader()):
             x = data[0]
             y = data[1]

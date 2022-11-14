@@ -3,7 +3,8 @@ import paddle.nn.functional as F
 import re
 import numpy as np
 
-print(paddle.__version__)
+# 训练轮数
+EPOCH = 1
 
 MAX_LEN = 10
 
@@ -74,14 +75,14 @@ hidden_size = 256
 num_encoder_lstm_layers = 1
 en_vocab_size = len(list(en_vocab))
 cn_vocab_size = len(list(cn_vocab))
-epochs = 20
 batch_size = 16
+
 
 # encoder: simply learn representation of source sentence
 class Encoder(paddle.nn.Layer):
     def __init__(self):
         super(Encoder, self).__init__()
-        self.emb = paddle.nn.Embedding(en_vocab_size, embedding_size,)
+        self.emb = paddle.nn.Embedding(en_vocab_size, embedding_size, )
         self.lstm = paddle.nn.LSTM(input_size=embedding_size,
                                    hidden_size=hidden_size,
                                    num_layers=num_encoder_lstm_layers)
@@ -146,13 +147,14 @@ class AttentionDecoder(paddle.nn.Layer):
         output = paddle.squeeze(output)
         return output, (hidden, cell)
 
+
 encoder = Encoder()
 atten_decoder = AttentionDecoder()
 
 opt = paddle.optimizer.Adam(learning_rate=0.001,
-                            parameters=encoder.parameters()+atten_decoder.parameters())
+                            parameters=encoder.parameters() + atten_decoder.parameters())
 
-for epoch in range(epochs):
+for epoch in range(EPOCH):
     print("epoch:{}".format(epoch))
 
     # shuffle training data
@@ -162,12 +164,13 @@ for epoch in range(epochs):
     train_cn_label_sents_shuffled = train_cn_label_sents[perm]
 
     for iteration in range(train_en_sents_shuffled.shape[0] // batch_size):
-        x_data = train_en_sents_shuffled[(batch_size*iteration):(batch_size*(iteration+1))]
+        x_data = train_en_sents_shuffled[(batch_size * iteration):(batch_size * (iteration + 1))]
         sent = paddle.to_tensor(x_data)
         en_repr = encoder(sent)
 
-        x_cn_data = train_cn_sents_shuffled[(batch_size*iteration):(batch_size*(iteration+1))]
-        x_cn_label_data = train_cn_label_sents_shuffled[(batch_size*iteration):(batch_size*(iteration+1))].astype('int64')
+        x_cn_data = train_cn_sents_shuffled[(batch_size * iteration):(batch_size * (iteration + 1))]
+        x_cn_label_data = train_cn_label_sents_shuffled[(batch_size * iteration):(batch_size * (iteration + 1))].astype(
+            'int64')
 
         # shape: (batch,  num_layer(=1 here) * num_of_direction(=1 here), hidden_size)
         hidden = paddle.zeros([batch_size, 1, hidden_size])
@@ -176,15 +179,15 @@ for epoch in range(epochs):
         loss = paddle.zeros([1])
         # the decoder recurrent loop mentioned above
         for i in range(MAX_LEN + 2):
-            cn_word = paddle.to_tensor(x_cn_data[:,i:i+1])
-            cn_word_label = paddle.to_tensor(x_cn_label_data[:,i])
+            cn_word = paddle.to_tensor(x_cn_data[:, i:i + 1])
+            cn_word_label = paddle.to_tensor(x_cn_label_data[:, i])
 
             logits, (hidden, cell) = atten_decoder(cn_word, hidden, cell, en_repr)
             step_loss = F.cross_entropy(logits, cn_word_label)
             loss += step_loss
 
         loss = loss / (MAX_LEN + 2)
-        if(iteration % 200 == 0):
+        if (iteration % 200 == 0):
             print("iter {}, loss:{}".format(iteration, loss.numpy()))
 
         loss.backward()
