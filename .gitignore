@@ -17,3 +17,4 @@ META-INF\
 /microBenchMark/24_使用序列到序列模型完成数字加法/app/final_model
 /microBenchMark/25_使用协同过滤实现电影推荐/app/checkpoints/
 /microBenchMark/25_使用协同过滤实现电影推荐/app/visualdl/
+WordCount.jar
