@@ -18,3 +18,11 @@ META-INF\
 /microBenchMark/25_使用协同过滤实现电影推荐/app/checkpoints/
 /microBenchMark/25_使用协同过滤实现电影推荐/app/visualdl/
 *.jar
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/iLab-bench.iml
+.idea/deployment.xml

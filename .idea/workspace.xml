@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a45d6a52-624f-4672-8d26-b4a903138349" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/5_K-Means聚类算法/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/TUF/PycharmProjects/iLab-bench/microBenchMark/1_WordCount词频统计/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,7 +47,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668428999808</updated>
-      <workItem from="1668429001213" duration="2854000" />
+      <workItem from="1668429001213" duration="3236000" />
+      <workItem from="1668519370961" duration="17000" />
+      <workItem from="1668521015882" duration="969000" />
     </task>
     <servers />
   </component>
