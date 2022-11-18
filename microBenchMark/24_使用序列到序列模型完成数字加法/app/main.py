@@ -7,7 +7,7 @@ import paddle.nn as nn
 from visualdl import LogWriter
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 
 # 编码函数

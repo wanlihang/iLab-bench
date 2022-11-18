@@ -5,7 +5,7 @@ import paddle.nn as nn
 from paddle.io import Dataset
 
 # 训练轮数
-EPOCH = 5
+EPOCH = 3
 
 df = pd.read_csv('./data/ml-latest-small/ratings.csv')
 user_ids = df["userId"].unique().tolist()

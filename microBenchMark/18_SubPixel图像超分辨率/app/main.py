@@ -13,7 +13,7 @@ from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
 from paddle.io import Dataset
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 class MyDataset(Dataset):
     def __init__(self):

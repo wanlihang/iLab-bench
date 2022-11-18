@@ -10,7 +10,7 @@ from paddle.distribution import Normal
 from visualdl import LogWriter
 
 # 训练轮数
-EPOCH = 250
+EPOCH = 100
 
 
 # 定义评论家网络结构
@@ -93,7 +93,7 @@ def soft_update(target, source, tau):
     # 定义环境、实例化模型
 
 
-env = gym.make('Pendulum-v1')
+env = gym.make('Pendulum-v0')
 actor = Actor()
 critic = Critic()
 actor_target = Actor()
@@ -174,7 +174,7 @@ for epoch in range(0, EPOCH):
         state = next_state
 
     writer.add_scalar('episode reward', episode_reward, epoch)
-    if epoch % 50 == 0:
+    if epoch % 10 == 0:
         print('Epoch:{}, episode reward is {}'.format(epoch, episode_reward))
 
     if epoch % 200 == 0:

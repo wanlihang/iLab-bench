@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 transform = ToTensor()
 cifar10_train = paddle.vision.datasets.Cifar10(mode='train',

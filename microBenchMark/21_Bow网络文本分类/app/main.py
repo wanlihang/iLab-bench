@@ -2,7 +2,7 @@ import paddle
 import numpy as np
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 print('loading dataset...')
 train_dataset = paddle.text.datasets.Imdb(mode='train')

@@ -4,7 +4,7 @@ from paddle.metric import Accuracy
 from paddle.vision.transforms import Compose, Normalize
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 transform = Compose([Normalize(mean=[127.5],
                                std=[127.5],

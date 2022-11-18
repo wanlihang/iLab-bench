@@ -2,14 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a45d6a52-624f-4672-8d26-b4a903138349" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/microBenchMark/5_K-Means聚类算法/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/14_LeNet图像分类/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/14_LeNet图像分类/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/15_简单卷积神经网络图像分割/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/15_简单卷积神经网络图像分割/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/17_PaddleOcr验证码识别/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/17_PaddleOcr验证码识别/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/18_SubPixel图像超分辨率/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/18_SubPixel图像超分辨率/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/19_Resnet18人脸关键点检测/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/19_Resnet18人脸关键点检测/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/1_WordCount词频统计/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/1_WordCount词频统计/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/1_WordCount词频统计/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/21_Bow网络文本分类/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/21_Bow网络文本分类/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/24_使用序列到序列模型完成数字加法/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/24_使用序列到序列模型完成数字加法/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/25_使用协同过滤实现电影推荐/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/25_使用协同过滤实现电影推荐/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/25_使用协同过滤实现电影推荐/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/25_使用协同过滤实现电影推荐/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/app/logs/vdlrecords.1668423290.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/2_PageRank网页排序/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/2_PageRank网页排序/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/2_PageRank网页排序/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/3_MapReduce的索引倒排/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/microBenchMark/3_MapReduce的索引倒排/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/3_MapReduce的索引倒排/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/4_LinearRegression算法/app/LinearRegression_scikit-learn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microBenchMark/5_K-Means聚类算法/app/K-Means_scikit-learn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,17 +52,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/TUF/PycharmProjects/iLab-bench/microBenchMark/1_WordCount词频统计/app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/TUF/anaconda3/envs/python37&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TUF\PycharmProjects\iLab-bench\microBenchMark\1_WordCount词频统计\app" />
@@ -49,7 +80,8 @@
       <updated>1668428999808</updated>
       <workItem from="1668429001213" duration="3236000" />
       <workItem from="1668519370961" duration="17000" />
-      <workItem from="1668521015882" duration="969000" />
+      <workItem from="1668521015882" duration="16071000" />
+      <workItem from="1668750892565" duration="6203000" />
     </task>
     <servers />
   </component>
@@ -66,5 +98,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/iLab_bench$main.coverage" NAME="main Coverage Results" MODIFIED="1668750402660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/microBenchMark/27_强化学习DeepDeterministicPolicyGradient/app" />
   </component>
 </project>

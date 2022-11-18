@@ -7,7 +7,7 @@ from paddle.vision.models import resnet18
 from paddle.vision.transforms import transforms
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 Train_Dir = './data/facial-keypoints-detection/training/training.csv'
 Test_Dir = './data/facial-keypoints-detection/test/test.csv'

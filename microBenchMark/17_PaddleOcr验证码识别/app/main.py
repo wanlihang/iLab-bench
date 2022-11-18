@@ -7,7 +7,7 @@ import numpy as np
 from paddle.io import Dataset
 
 # 训练轮数
-EPOCH = 2
+EPOCH = 1
 
 # 图片信息配置 - 通道数、高度、宽度
 IMAGE_SHAPE_C = 3
